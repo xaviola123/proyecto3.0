@@ -1,0 +1,69 @@
+/* Reset de estilos básicos */
+body, html {
+    margin: 0;
+    padding: 16px;
+    font-family: Arial, sans-serif;
+    background-color: #2bb292; /* Color de fondo para toda la página */
+  
+    width: 40%;
+}
+
+/* Estilos para el contenedor */
+.container {
+    background-color: #fff; /* Color de fondo del contenedor */
+    padding: 30px; /* Espaciado interno del contenedor */
+    border-radius: 8px; /* Bordes redondeados del contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para el contenedor */
+    text-align: center;
+    max-width: 400px; /* Ancho máximo del contenedor */
+    width: 100%;
+}
+
+h2 {
+    color: #333; /* Color del título */
+    margin-bottom: 20px; /* Margen inferior del título */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px; /* Margen inferior de las etiquetas */
+    color: #333; /* Color del texto de las etiquetas */
+    font-weight: bold; /* Texto en negrita para las etiquetas */
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+input[type="password"] {
+    padding: 10px; /* Relleno interno de los campos de contraseña */
+    margin-bottom: 15px; /* Margen inferior de los campos de contraseña */
+    border: 1px solid #ccc; /* Borde del campo de contraseña */
+    border-radius: 4px; /* Bordes redondeados del campo de contraseña */
+    font-size: 16px; /* Tamaño de fuente de los campos de contraseña */
+    width: 100%; /* Ancho completo */
+    box-sizing: border-box; /* Caja de dimensiones que incluye el borde */
+}
+
+input[type="submit"] {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 12px 20px; /* Relleno interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente del botón */
+    cursor: pointer; /* Cursor estilo puntero */
+    text-decoration: none; /* Sin decoración de texto */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    width: 100%; /* Ancho completo */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Color de fondo del botón al pasar el mouse */
+}
+
+p.error {
+    color: red; /* Color del texto de error */
+    margin-top: 10px; /* Margen superior para separación */
+}

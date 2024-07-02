@@ -1,0 +1,212 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    background-image: url("img/fondo.jpg");
+    background-size: cover; /* Esto asegura que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat; /* Esto evita que la imagen se repita */
+    background-attachment: fixed; 
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    background: #dbdbdb;
+    padding: 26px;
+    margin-top: 20px;
+    border: 0px solid;
+    border-radius: 32px;
+    width: 40%;
+    margin-left: 27%;
+    color: #333;
+    background-image: url("img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: rgb(248, 248, 248);
+    color: #070707;
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+    background: #28fa0c;
+}
+
+#cerrarSesion{
+    background: #86918600
+}
+#cerrarSesion input:hover{
+    background-color:red ;
+}
+h3 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+table {
+    width:90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  
+}
+tbody{
+    background-color: #004040;
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #7feba8;
+    color: #333;
+    font-weight: bold;
+}
+
+td {
+    background-color: #7ce2e6;
+    color: #333;
+}
+
+td a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+td button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-top: 4px;
+}
+
+td button:hover {
+    background-color: #0056b3;
+}
+
+td button a {
+    color: white;
+    text-decoration: none;
+}
+
+td button a:hover {
+    text-decoration: none;
+}
+
+.logout-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logout-btn input[type="submit"] {
+    background: #d9534f;
+    color: #fff;
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.logout-btn input[type="submit"]:hover {
+    background: #c9302c;
+}
+
+
+/* Estilos para el nav */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav button {
+    display: inline-block; /* Mostrar como bloque en línea */
+    background-color: #008cba; /* Color azul para el botón de navegación */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el botón */
+    text-align: center;
+}
+
+#b1{
+    background-color: #00ba09; /* Color azul para el botón de navegación */
+}
+#b2{
+    background-color: #008cba; /* Color azul para el botón de navegación */
+}
+nav button:hover {
+    background-color: #005f5f; /* Cambio de color al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumentar la sombra */
+}
+
+nav button:active {
+    background-color: #004040; /* Color al hacer clic */
+    transform: translateY(0); /* Volver a la posición original */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra original */
+}
+
+nav button + button {
+    margin-left: 20px;
+}

@@ -1,0 +1,111 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-image: url("img/fondo.jpg");
+    background-size: cover; /* Esto asegura que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat; /* Esto evita que la imagen se repita */
+    background-attachment: fixed; 
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 600px;
+    width: 100%;
+    margin: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Alinear icono y texto verticalmente */
+}
+
+label i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button,
+input[type="submit"] {
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button.guardar,
+input[type="submit"].guardar {
+    background-color: #77be35; /* Verde */
+}
+
+input[type="submit"].renovar {
+    background-color: #093361; /* Color vistoso para renovar contraseña */
+}
+
+button:hover,
+input[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+button.volver {
+    background-color: #ccc; /* Gris bonito */
+}
+
+button.cerrar {
+    background-color: #dc3545; /* Rojo */
+}

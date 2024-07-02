@@ -1,0 +1,74 @@
+/* Reset de estilos básicos */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url("img/fondo-blanco-papel-tapiz-vidrio-agrietado_689904-117940.avif");
+    background-size: cover; /* Esto asegura que la imagen cubra toda la pantalla */
+    background-repeat: no-repeat; /* Esto evita que la imagen se repita */
+    background-attachment: fixed; 
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más visible */
+    text-align: left;
+    max-width: 600px;
+    width: 100%;
+    margin: 20px;
+    background-image: url("img/fondo.jpg");
+    
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+strong {
+    font-weight: bold;
+    color: #555;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+button:hover, a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Efecto de elevación al hacer hover */
+}
+
+a {
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+}

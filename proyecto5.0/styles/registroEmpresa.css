@@ -1,0 +1,132 @@
+/* Reset de estilos básicos */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2bb292;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/fondo-blanco-papel-tapiz-vidrio-agrietado_689904-117940.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+/* Estilos para el encabezado */
+h2 {
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Estilos para el formulario */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 20px;
+    background-image: url("img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+/* Estilos para mensajes de error */
+p.error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Estilos para el nav */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav button {
+    display: inline-block; /* Mostrar como bloque en línea */
+    background-color: #008cba; /* Color azul para el botón de navegación */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el botón */
+    text-align: center;
+}
+#b1{
+    background-color: #00ba09; /* Color azul para el botón de navegación */
+}
+#b2{
+    background-color: #008cba; /* Color azul para el botón de navegación */
+}
+
+nav button:hover {
+    background-color: #005f5f; /* Cambio de color al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumentar la sombra */
+}
+
+nav button:active {
+    background-color: #004040; /* Color al hacer clic */
+    transform: translateY(0); /* Volver a la posición original */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra original */
+}
+
+/* Ajuste para el espacio entre los botones en la navegación */
+nav button + button {
+    margin-left: 20px;
+}

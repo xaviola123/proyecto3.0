@@ -1,0 +1,73 @@
+/* Reset de estilos básicos */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url("img/foto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Estilos para el contenedor principal */
+#container {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+    width: 100%;
+    margin-top: 5%;
+}
+
+/* Estilos para el título principal */
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Estilos para los botones */
+#container button {
+    display: inline-block; /* Mostrar como bloque en línea */
+    width: 25%;
+    margin-right: 20px; /* Espacio entre los botones */
+    background-color: #5cb85c; /* Color verde para el botón de empresa */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold; /* Texto en negrita */
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para el botón */
+}
+
+#container button:hover {
+    background-color: #7fff7f; /* Cambio de color al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumentar la sombra */
+}
+
+#container button:active {
+    background-color: #4cae4c; /* Color al hacer clic */
+    transform: translateY(0); /* Volver a la posición original */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra original */
+}
+
+/* Ajuste para el espacio entre los botones */
+#container button + button {
+    margin-left: 20px;
+}
+
