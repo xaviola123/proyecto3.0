@@ -100,8 +100,7 @@ try {
     <!-- Enlaces -->
     <br>
     <a href="gestion_trabajadores.php"><button class="volver"><i class="fas fa-arrow-left"></i> Volver</button></a>
-    <br>
-    <a href="logout.php"><button class="cerrar"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button></a>
+   
 </div>
 </body>
 </html>

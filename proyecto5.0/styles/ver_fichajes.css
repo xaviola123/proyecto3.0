@@ -2,42 +2,64 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    padding: 20px; /* Añadido para separar el contenido del borde de la ventana */
     background-image: url("img/empresa-familiar.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 800px;
-    margin: 20px;
+    color: #333; /* Asegurar que el texto sea visible */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h2 {
-    color: #333;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px 70px;
+    padding-top: 0px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    background-image: url("img/fondo-blanco-papel-tapiz-vidrio-agrietado_689904-117940.avif");
+    height: 71px;
+    background-size: cover;
+    padding-top: 3%;
+    opacity: 1.1;
+    width: 23%;
 }
 
 table {
-    width: 100%;
-    margin-top: 20px;
+    width: 50%;
+    margin: 20px auto; /* Centrar la tabla y añadir margen superior e inferior */
     border-collapse: collapse;
     background: #f2f2f2;
     border-radius: 8px;
     overflow: hidden;
+    display: block; /* Hace que la tabla sea un bloque para que el scroll funcione */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5%;
+}
+
+thead {
+    display: table;
+    width: 100%;
+    background-color: #008cba;
+}
+
+tbody {
+    display: block;
+    max-height: 500px; /* Altura máxima para el cuerpo de la tabla */
+    overflow-y: auto; /* Permite el scroll vertical */
+    width: 100%;
 }
 
 table th, table td {
     padding: 12px;
     text-align: center;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box; 
+    width: 5%;
 }
 
 table th {
@@ -47,18 +69,23 @@ table th {
 
 table td {
     background-color: #eba7a7;
+    font-weight: bold;
 }
 
 button {
-    background-color: #007bff;
-    color: white;
-    border: none;
     padding: 10px 20px;
-    cursor: pointer;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    background-color: #007bff;
+    color: white;
     margin-top: 20px;
+}
+
+button.volver {
+    background-color: #ccc; 
 }
 
 button:hover {
@@ -76,4 +103,54 @@ a {
 
 a:hover {
     color: #bd2130;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button.volver {
+    background-color: #28a745;
+}
+
+button.volver:hover {
+    background-color: #218838;
+}
+
+button.cerrar-sesion {
+    background-color: #dc3545;
+}
+
+button.cerrar-sesion:hover {
+    background-color: #c82333;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Media queries para hacer responsive */
+
+@media (max-width: 750px) {
+    h2 {
+        padding: 5px; /* Reducir el padding horizontal */
+        width: 100%; /* Ajustar el ancho al 100% en pantallas pequeñas */
+    }
+
+    table {
+        width: 100%; /* Ajustar el ancho al 100% en pantallas pequeñas */
+        margin-top: 10%; /* Ajustar margen superior en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 100px; /* Reducir el tamaño del texto en pantallas muy pequeñas */
+        padding: 5px; /* Reducir el padding horizontal */
+        width: 100%; /* Ajustar el ancho al 100% en pantallas pequeñas */
+    }
+
+    button {
+        font-size: 14px; /* Reducir el tamaño del texto de los botones en pantallas muy pequeñas */
+    }
 }

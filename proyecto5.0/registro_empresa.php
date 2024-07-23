@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+$error = "";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST["nombre"];
     $direccion = $_POST["direccion"];
@@ -11,25 +13,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include 'config.php';
     
     try {
-        $conn->beginTransaction();
+        // Verificar si el email ya existe
+        $stmt = $conn->prepare("SELECT COUNT(*) FROM Empresas WHERE email = ?");
+        $stmt->execute([$email]);
+        $email_exists = $stmt->fetchColumn();
 
-        // Generar el hash de la contraseña
-        $hashed_password = password_hash($password,PASSWORD_DEFAULT); 
-        $stmt = $conn->prepare("INSERT INTO Empresas (nombre, direccion, telefono, email, pass) VALUES (?, ?, ?, ?, ?)");
-        $stmt->execute([$nombre, $direccion, $telefono, $email, $hashed_password]);
+        if ($email_exists) {
+            $error = "El email ya está registrado. No se ha creado la empresa.";
+        } else {
+            $conn->beginTransaction();
 
-        $empresa_id = $conn->lastInsertId();
+            // Generar el hash de la contraseña
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT); 
+            $stmt = $conn->prepare("INSERT INTO Empresas (nombre, direccion, telefono, email, pass) VALUES (?, ?, ?, ?, ?)");
+            $stmt->execute([$nombre, $direccion, $telefono, $email, $hashed_password]);
 
-        
+            $empresa_id = $conn->lastInsertId();
+            $conn->commit();
 
-        $conn->commit();
-        $_SESSION["empresa_id"] = $empresa_id;
-        $_SESSION['empresa_nombre'] = $nombre; 
-        header("Location: login_empresa.php");
-        exit(); 
+            $_SESSION["empresa_id"] = $empresa_id;
+            $_SESSION['empresa_nombre'] = $nombre; 
+            header("Location: login_empresa.php");
+            exit(); 
+        }
     } catch (PDOException $e) {
         $conn->rollBack();
-        echo "Error: " . $e->getMessage();
+        $error = "Error: " . $e->getMessage();
     }
 }
 ?>
@@ -45,13 +54,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
 <nav>
-        <ul>
-            <li><a href="login_trabajador.php"><button id="b1">Trabajador</button></a></li>
-            <li><a href="login_empresa.php"> <button id="b2">Empresa</button></a></li>
-        </ul>
-    </nav>
-    <h2>Registro de Nueva Empresa</h2>
-    <form method="POST">
+    <ul>
+        <li><a href="login_trabajador.php"><button id="b1">Trabajador</button></a></li>
+        <li><a href="login_empresa.php"> <button id="b2">Empresa</button></a></li>
+    </ul>
+</nav>
+<h2>Registro de Nueva Empresa</h2>
+<form method="POST">
     <label for="nombre"><i class="fas fa-user"></i> Nombre de la Empresa:</label>
     <input type="text" id="nombre" name="nombre" required><br><br>
     
@@ -61,17 +70,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <label for="telefono"><i class="fas fa-phone"></i> Teléfono:</label>
     <input type="text" id="telefono" name="telefono" required><br><br>
     
+
+    <?php if ($error): ?>
+        <div class="error"><?php echo $error; ?></div>
+    <?php endif; ?>
+
     <label for="email"><i class="fas fa-envelope"></i> Email:</label>
     <input type="email" id="email" name="email" required><br><br>
-    
+   
     <label for="password"><i class="fas fa-lock"></i> Contraseña:</label>
     <input type="password" id="password" name="password" required><br><br>
     
     <input type="submit" value="Registrar Empresa">
 </form>
 
-
-    
 </body>
 <script src="js/validar_registroEmpresa.js"></script>
 </html>

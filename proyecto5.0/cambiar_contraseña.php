@@ -37,9 +37,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="styles/cambiarContrasena.css">
 </head>
 <body>
-    <h2>Cambiar Contraseña</h2>
+  
     <?php if (isset($error)) { echo "<p>$error</p>"; } ?>
     <form method="POST">
+    <h2>Cambiar Contraseña</h2>
         <label for="nueva_contraseña">Nueva Contraseña:</label>
         <input type="password" id="nueva_contraseña" name="nueva_contraseña" required><br><br>
         <label for="confirmar_contraseña">Confirmar Contraseña:</label>

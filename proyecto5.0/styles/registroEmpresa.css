@@ -72,9 +72,11 @@ input[type="submit"]:hover {
 }
 
 /* Estilos para mensajes de error */
-p.error {
+.error {
     color: red;
-    margin-top: 10px;
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 20px;
 }
 
 /* Estilos para el nav */

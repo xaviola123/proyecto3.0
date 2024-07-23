@@ -39,20 +39,24 @@ try {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
     <title>Ver Fichajes</title>
     <link rel="stylesheet" href="styles/ver_fichajes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container">
-        <h2>Fichajes de <?php echo htmlspecialchars($trabajador['nombre']) . " (DNI: " . htmlspecialchars($trabajador['dni']) . ")"; ?></h2>
-        <table>
+    <h2>Fichajes de <?php echo htmlspecialchars($trabajador['nombre']) . " (DNI: " . htmlspecialchars($trabajador['dni']) . ")"; ?></h2>
+    <table>
+        <thead>
             <tr>
                 <th>Fecha</th>
                 <th>Hora de Entrada</th>
                 <th>Hora de Salida</th>
             </tr>
+        </thead>
+        <tbody>
             <?php foreach ($fichajes as $fichaje): ?>
             <tr>
                 <td><?php echo htmlspecialchars($fichaje['fecha']); ?></td>
@@ -60,12 +64,11 @@ try {
                 <td><?php echo htmlspecialchars($fichaje['hora_salida']); ?></td>
             </tr>
             <?php endforeach; ?>
-        </table>
-        <br>
-        <button onclick="goBack()">Volver</button>
-        <br><br>
-        <a href="logout.php">Cerrar Sesión</a>
-    </div>
+        </tbody>
+    </table>
+   
+    <a href="gestion_trabajadores.php"><button class="volver" onclick="goBack()"><i class="fas fa-arrow-left"></i> Volver</button></a>
+    <a href="logout.php"><button class="cerrar-sesion"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button></a>
 
     <script>
         function goBack() {
@@ -74,3 +77,5 @@ try {
     </script>
 </body>
 </html>
+
+
